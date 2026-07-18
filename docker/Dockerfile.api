@@ -1,0 +1,21 @@
+# API image — FastAPI (Python 3.13)
+FROM python:3.13-slim
+
+ENV PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1
+
+WORKDIR /app
+
+# Install dependencies first for layer caching.
+COPY apps/api/pyproject.toml ./
+RUN python -m venv /opt/venv && \
+    /opt/venv/bin/pip install --upgrade pip && \
+    /opt/venv/bin/pip install -e ".[dev]"
+
+# Copy source.
+COPY apps/api/ ./
+
+ENV PATH="/opt/venv/bin:$PATH"
+
+EXPOSE 8000
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
