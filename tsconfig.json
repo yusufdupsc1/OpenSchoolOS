@@ -11,11 +11,10 @@
     "resolveJsonModule": true,
     "declaration": true,
     "noEmit": true,
-    "baseUrl": ".",
     "paths": {
-      "@openschoolos/domain": ["packages/domain/src"],
-      "@openschoolos/shared": ["packages/shared/src"],
-      "@openschoolos/ui": ["packages/ui/src"]
+      "@openschoolos/domain": ["./packages/domain/src"],
+      "@openschoolos/shared": ["./packages/shared/src"],
+      "@openschoolos/ui": ["./packages/ui/src"]
     }
   },
   "exclude": ["node_modules", "dist", ".next", "**/__pycache__/**"]
