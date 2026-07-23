@@ -1,3 +1,4 @@
-from fastapi import FastAPI
+# Re-export the FastAPI app so `uvicorn app.main:app` and `app` both resolve.
+from app.main import app
 
-app = FastAPI(title="OpenSchoolOS API", version="0.1.0")
+__all__ = ["app"]

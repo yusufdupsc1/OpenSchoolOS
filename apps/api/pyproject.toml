@@ -21,7 +21,10 @@ dev = [
 
 [build-system]
 requires = ["setuptools>=75.0.0"]
-build-backend = "setuptools.build_meta"
+  build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
 packages = ["app"]
+
+[project.scripts]
+dev = "uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
