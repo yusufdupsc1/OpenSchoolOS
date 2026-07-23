@@ -1,0 +1,16 @@
+# Web dev image — Next.js with live reload
+FROM node:24-alpine
+
+RUN corepack enable
+
+WORKDIR /app
+
+# Install workspace dependencies (cached layer)
+COPY pnpm-workspace.yaml package.json turbo.json ./
+COPY packages/domain/package.json packages/shared/package.json packages/ui/package.json packages/*/
+COPY apps/web/package.json apps/web/
+RUN pnpm install --frozen-lockfile=false
+
+# Source will be mounted at runtime; .next is persisted in a named volume.
+EXPOSE 3000
+CMD ["pnpm", "--filter", "@openschoolos/web", "dev", "--port", "3000", "--hostname", "0.0.0.0"]

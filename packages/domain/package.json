@@ -8,7 +8,8 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "vitest run"
+    "test": "vitest run",
+    "dev": "echo 'no dev server for domain package'"
   },
   "devDependencies": {
     "typescript": "^7.0.2",

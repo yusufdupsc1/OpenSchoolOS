@@ -78,3 +78,58 @@ The AI engineering team operates from the **Engineering Playbook**
 recorded decisions (`.ai/decision-log.md`), and one disciplined pipeline every
 feature passes through. This is tool-agnostic — it works the same regardless of
 which coding assistant you use.
+
+## Running the Project
+
+### Prerequisites
+
+- **Docker** (recommended): Docker Engine + Docker Compose v2+.
+  _or_
+- **Host**: Node.js 20+ (with `pnpm`), Python 3.13+ (with `pip` or `uv`), PostgreSQL 17 running on `localhost:5432`.
+
+### Option A — Docker Compose (recommended)
+
+```bash
+cp .env.example .env   # optional: override DATABASE_URL or NEXT_PUBLIC_API_URL
+./scripts/dev.sh
+# → Web:  http://localhost:3000
+# → API:  http://localhost:8000/docs
+```
+
+Source is mounted; changes reload automatically. Postgres data persists in the
+`pgdata` volume.
+
+### Option B — Host (no Docker)
+
+```bash
+cp .env.example .env   # adjust DATABASE_URL if your Postgres differs
+
+# Start Postgres (macOS example)
+brew services start postgresql@17
+
+# Install API deps and start API with live reload
+cd apps/api
+python3 -m venv .venv && source .venv/bin/activate
+pip install -e ".[dev]"
+uvicorn app.main:app --reload --port 8000
+
+# In another terminal, start the web
+pnpm --filter @openschoolos/web dev
+# → Web:  http://localhost:3000
+# → API:  http://localhost:8000/docs
+```
+
+A helper script for the host path also exists: `./scripts/dev-local.sh` (starts
+Postgres, creates the venv, and runs both services in the foreground).
+
+### Stopping
+
+- **Docker:** `Ctrl+C` in the terminal running `./scripts/dev.sh`, then `docker compose down`.
+- **Host:** `Ctrl+C` in each terminal. To reset Postgres data (Docker only): `docker compose down -v`.
+
+### Tests
+
+```bash
+pnpm test                           # web (Vitest) + domain (Vitest)
+cd apps/api && pytest tests/test_api.py  # API (requires installed dev deps)
+```
