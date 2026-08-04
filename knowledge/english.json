@@ -1,0 +1,88 @@
+{
+  "subject": "English",
+  "description": "The English LDG covers grammar, usage, and language conventions. Many writing difficulties trace to gaps here.",
+  "competencies": [
+    {
+      "id": "eng-parts-of-speech",
+      "label": "Parts of Speech",
+      "description": "Identifying and using nouns, verbs, adjectives, adverbs in sentences.",
+      "gradeLevel": "1–3",
+      "prerequisites": [],
+      "misconceptions": [
+        {
+          "observed": "Cannot identify the verb in a sentence.",
+          "rootGap": "Confuses word meaning with word function; e.g. thinks 'run' is always a verb even in 'a morning run.'",
+          "evidence": "Labels all action words as verbs regardless of sentence role.",
+          "strategy": "Function-first teaching: 'What job is this word doing in this sentence?' not 'What does this word mean?'"
+        }
+      ]
+    },
+    {
+      "id": "eng-tenses",
+      "label": "Verb Tenses",
+      "description": "Using past, present, and future tenses correctly and consistently.",
+      "gradeLevel": "2–4",
+      "prerequisites": ["eng-parts-of-speech"],
+      "misconceptions": [
+        {
+          "observed": "Switches tenses mid-paragraph: 'She walks to school and then she ate lunch.'",
+          "rootGap": "Does not understand that tense must be consistent across a narrative.",
+          "evidence": "Mixes past and present in the same sentence or paragraph.",
+          "strategy": "Timeline visual; colour-code past/present/future; tense-consistency editing checklist."
+        }
+      ]
+    },
+    {
+      "id": "eng-subject-verb",
+      "label": "Subject-Verb Agreement",
+      "description": "Matching the verb form to the subject in number and person.",
+      "gradeLevel": "2–4",
+      "prerequisites": ["eng-parts-of-speech"],
+      "misconceptions": [
+        {
+          "observed": "Writes 'They goes' or 'He go.'",
+          "rootGap": "Does not hear or apply the agreement pattern; interference from spoken dialect in some cases.",
+          "evidence": "Inconsistent agreement, especially with irregular verbs and third-person singular.",
+          "strategy": "Oral practice before writing; 'He/She/It + s' anchor chart; peer editing for agreement only."
+        }
+      ]
+    },
+    {
+      "id": "eng-punctuation",
+      "label": "Punctuation",
+      "description": "Using full stops, commas, question marks, quotation marks, and apostrophes correctly.",
+      "gradeLevel": "2–5",
+      "prerequisites": ["eng-parts-of-speech"],
+      "misconceptions": [
+        {
+          "observed": "No punctuation at all or random capital letters mid-sentence.",
+          "rootGap": "Does not understand that punctuation guides the reader; writing is treated as a continuous stream.",
+          "evidence": "Entire paragraph without a single full stop; capital letters on random words.",
+          "strategy": "Read writing aloud exactly as punctuated; punctuation hunts in familiar books; 'punctuation police' peer editing."
+        }
+      ]
+    },
+    {
+      "id": "eng-sentence-types",
+      "label": "Sentence Variety",
+      "description": "Using simple, compound, and complex sentences for effect.",
+      "gradeLevel": "3–5",
+      "prerequisites": ["eng-tenses", "eng-subject-verb", "eng-punctuation"],
+      "misconceptions": [
+        {
+          "observed": "All sentences start the same way ('I…', 'The…', 'It…'). Writing feels monotonous.",
+          "rootGap": "Has not learned to vary sentence openings or combine ideas.",
+          "evidence": "Every sentence is simple; no conjunctions beyond 'and'.",
+          "strategy": "Sentence combining exercises; teach sentence openers (adverb, prepositional phrase, subordinate clause)."
+        }
+      ]
+    }
+  ],
+  "dependencyGraph": {
+    "eng-parts-of-speech": [],
+    "eng-tenses": ["eng-parts-of-speech"],
+    "eng-subject-verb": ["eng-parts-of-speech"],
+    "eng-punctuation": ["eng-parts-of-speech"],
+    "eng-sentence-types": ["eng-tenses", "eng-subject-verb", "eng-punctuation"]
+  }
+}

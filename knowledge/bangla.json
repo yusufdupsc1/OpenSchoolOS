@@ -1,0 +1,104 @@
+{
+  "subject": "Bangla",
+  "description": "The Bangla LDG covers mother-tongue literacy: alphabet recognition, joined-letter reading, and comprehension. Gaps here often affect performance in all other subjects.",
+  "competencies": [
+    {
+      "id": "bn-letter-recognition",
+      "label": "Letter Recognition (বর্ণ পরিচিতি)",
+      "description": "Recognizing and naming all Bangla vowels (স্বরবর্ণ) and consonants (ব্যঞ্জনবর্ণ).",
+      "gradeLevel": "K–1",
+      "prerequisites": [],
+      "misconceptions": [
+        {
+          "observed": "Confuses similar-looking letters: ঘ/ণ, থ/য, প/ষ.",
+          "rootGap": "Has not developed fine discrimination between visually similar Bangla graphemes.",
+          "evidence": "Consistently misidentifies letters that share visual features.",
+          "strategy": "Multi-sensory letter tracing; sort similar letters into groups; highlight distinguishing features."
+        }
+      ]
+    },
+    {
+      "id": "bn-kar",
+      "label": "Kar / Vowel Diacritics (কার চিহ্ন)",
+      "description": "Reading and writing vowel signs (আ-কার, ই-কার, etc.) attached to consonants.",
+      "gradeLevel": "1–2",
+      "prerequisites": ["bn-letter-recognition"],
+      "misconceptions": [
+        {
+          "observed": "Reads consonant only, ignoring the kar; reads কি as ক.",
+          "rootGap": "Treats the base consonant as the full syllable; does not process the diacritic.",
+          "evidence": "Skips or misreads vowel marks consistently.",
+          "strategy": "Colour-code the kar; isolate consonant+kar pairs; flashcard drills with kar variation."
+        }
+      ]
+    },
+    {
+      "id": "bn-joint-letters",
+      "label": "Joint Letters (যুক্তাক্ষর)",
+      "description": "Reading and writing consonant clusters formed by joining two or more consonants.",
+      "gradeLevel": "2–4",
+      "prerequisites": ["bn-kar"],
+      "misconceptions": [
+        {
+          "observed": "Stops completely at a juktakkhor; guesses or skips the word.",
+          "rootGap": "Cannot decompose a joint letter into its constituent consonants.",
+          "evidence": "Fluent until encountering a joint letter, then breaks down or guesses.",
+          "strategy": "Teach joint-letter families (e.g., all ক্ষ clusters); break juktakkhor into parts; joint-letter chart on desk."
+        }
+      ]
+    },
+    {
+      "id": "bn-reading-fluency",
+      "label": "Bangla Reading Fluency",
+      "description": "Reading Bangla text with speed, accuracy, and comprehension.",
+      "gradeLevel": "2–5",
+      "prerequisites": ["bn-joint-letters"],
+      "misconceptions": [
+        {
+          "observed": "Reads Bangla haltingly; decodes every syllable individually.",
+          "rootGap": "Has not automatized Bangla decoding; all cognitive effort goes to letter/kar processing.",
+          "evidence": "Cannot retell what was just read; reading speed far below oral language speed.",
+          "strategy": "Repeated reading of familiar texts; paired reading with a fluent peer; read-aloud modeling."
+        }
+      ]
+    },
+    {
+      "id": "bn-comprehension",
+      "label": "Bangla Comprehension",
+      "description": "Understanding and responding to Bangla text at literal and inferential levels.",
+      "gradeLevel": "3–5",
+      "prerequisites": ["bn-reading-fluency"],
+      "misconceptions": [
+        {
+          "observed": "Reads a Bangla passage but cannot answer questions about it.",
+          "rootGap": "Decoding effort consumes all attention; no capacity left for meaning-making.",
+          "evidence": "Answers unrelated or says 'I don't know' even for literal questions.",
+          "strategy": "Build fluency first, then layer comprehension; oral retelling in Bangla; prediction before reading."
+        }
+      ]
+    },
+    {
+      "id": "bn-writing",
+      "label": "Bangla Composition",
+      "description": "Writing sentences and short compositions in Bangla with correct spelling and grammar.",
+      "gradeLevel": "3–5",
+      "prerequisites": ["bn-joint-letters"],
+      "misconceptions": [
+        {
+          "observed": "Spells words as they sound in dialect, not as they are written.",
+          "rootGap": "Has not internalized standard Bangla spelling conventions.",
+          "evidence": "Writes phonetically from spoken dialect; spellings match pronunciation but not standard orthography.",
+          "strategy": "Word walls of high-frequency words; compare spoken vs written forms; dictation practice."
+        }
+      ]
+    }
+  ],
+  "dependencyGraph": {
+    "bn-letter-recognition": [],
+    "bn-kar": ["bn-letter-recognition"],
+    "bn-joint-letters": ["bn-kar"],
+    "bn-reading-fluency": ["bn-joint-letters"],
+    "bn-comprehension": ["bn-reading-fluency"],
+    "bn-writing": ["bn-joint-letters"]
+  }
+}

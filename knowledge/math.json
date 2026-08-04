@@ -1,0 +1,186 @@
+{
+  "subject": "Mathematics",
+  "description": "The Mathematics LDG maps dependencies between numerical and spatial reasoning skills. Teachers trace backwards from the visible error to the earliest missing prerequisite.",
+  "competencies": [
+    {
+      "id": "math-number-sense",
+      "label": "Number Sense",
+      "description": "Understanding that numbers represent quantities; one-to-one correspondence; counting objects accurately.",
+      "gradeLevel": "K–1",
+      "prerequisites": [],
+      "misconceptions": [
+        {
+          "observed": "Rote counts without connecting to objects.",
+          "rootGap": "No one-to-one correspondence.",
+          "evidence": "Skips objects or double-counts; cannot answer 'how many?' after counting.",
+          "strategy": "Count physical objects together; touch each object once."
+        }
+      ]
+    },
+    {
+      "id": "math-place-value",
+      "label": "Place Value",
+      "description": "Understanding that the position of a digit determines its value (ones, tens, hundreds).",
+      "gradeLevel": "1–2",
+      "prerequisites": ["math-number-sense"],
+      "misconceptions": [
+        {
+          "observed": "Writes '12' for twenty-one; reverses two-digit numbers.",
+          "rootGap": "Does not understand tens and ones as distinct positions.",
+          "evidence": "Consistently reverses digits; cannot explain what the '1' in 12 means.",
+          "strategy": "Build numbers with base-10 blocks; physically group and ungroup tens."
+        }
+      ]
+    },
+    {
+      "id": "math-addition",
+      "label": "Addition",
+      "description": "Combining two quantities to find a total; understanding addition as 'putting together'.",
+      "gradeLevel": "1–2",
+      "prerequisites": ["math-number-sense", "math-place-value"],
+      "misconceptions": [
+        {
+          "observed": "Counts all from 1 instead of counting on.",
+          "rootGap": "Does not understand that the first addend is already a quantity.",
+          "evidence": "For 5+3, counts 1,2,3,4,5,6,7,8 instead of starting at 5.",
+          "strategy": "Use number lines; practice counting on from the larger number."
+        },
+        {
+          "observed": "Cannot add beyond 10 without fingers.",
+          "rootGap": "No mental representation of place value in addition.",
+          "evidence": "Gets stuck when fingers run out; cannot decompose numbers.",
+          "strategy": "Ten-frames; make-a-ten strategy; decompose the smaller addend."
+        }
+      ]
+    },
+    {
+      "id": "math-subtraction",
+      "label": "Subtraction",
+      "description": "Taking away one quantity from another; understanding subtraction as difference, not just 'taking away'.",
+      "gradeLevel": "1–2",
+      "prerequisites": ["math-addition"],
+      "misconceptions": [
+        {
+          "observed": "Always subtracts the smaller number from the larger, even when it should be the reverse.",
+          "rootGap": "Does not understand subtraction as a directed operation.",
+          "evidence": "For 5-7, writes 2 instead of recognizing negative numbers don't apply.",
+          "strategy": "Number line with direction; story problems that require thinking about order."
+        }
+      ]
+    },
+    {
+      "id": "math-repeated-addition",
+      "label": "Repeated Addition",
+      "description": "Adding the same number multiple times; the bridge from addition to multiplication.",
+      "gradeLevel": "2–3",
+      "prerequisites": ["math-addition"],
+      "misconceptions": [
+        {
+          "observed": "Adds 3+3+3+3 by counting all from 1 each time.",
+          "rootGap": "Does not see repeated addition as skip-counting.",
+          "evidence": "Cannot answer 'four threes' without adding sequentially.",
+          "strategy": "Skip-counting practice; arrays of objects; connect to times tables."
+        }
+      ]
+    },
+    {
+      "id": "math-multiplication",
+      "label": "Multiplication",
+      "description": "Scaling one quantity by another; understanding multiplication as repeated addition and as arrays.",
+      "gradeLevel": "3–4",
+      "prerequisites": ["math-repeated-addition", "math-place-value"],
+      "misconceptions": [
+        {
+          "observed": "Memorizes tables. Cannot explain why 4×3=12.",
+          "rootGap": "Repeated addition is never understood as the foundation.",
+          "evidence": "Fails to model 4×3 with objects or draw an array.",
+          "strategy": "Concrete → Visual → Symbolic progression. Use real objects, then drawings, then symbols only."
+        },
+        {
+          "observed": "Gets the same answer for 3×4 and 4×3 but cannot explain commutativity.",
+          "rootGap": "Sees multiplication as procedure, not relationship.",
+          "evidence": "When asked 'prove it without multiplication,' cannot.",
+          "strategy": "Arrays rotated 90°; show that 3 rows of 4 = 4 rows of 3."
+        }
+      ]
+    },
+    {
+      "id": "math-division",
+      "label": "Division",
+      "description": "Splitting a quantity into equal groups; understanding division as both sharing and grouping.",
+      "gradeLevel": "3–4",
+      "prerequisites": ["math-multiplication", "math-subtraction"],
+      "misconceptions": [
+        {
+          "observed": "Treats division as always 'making smaller'; surprised when dividing by a fraction.",
+          "rootGap": "Does not understand division as 'how many groups of this size?'",
+          "evidence": "Cannot explain 12÷3 without physically splitting 12 objects.",
+          "strategy": "Two meanings: sharing (12 shared among 3) and grouping (how many 3s in 12?). Use both contexts."
+        }
+      ]
+    },
+    {
+      "id": "math-fractions",
+      "label": "Fractions",
+      "description": "Understanding parts of a whole; equivalence; comparing and ordering fractions.",
+      "gradeLevel": "3–5",
+      "prerequisites": ["math-division", "math-number-sense"],
+      "misconceptions": [
+        {
+          "observed": "Thinks 1/4 is larger than 1/2 because 4 > 2.",
+          "rootGap": "Does not understand that the denominator indicates the number of equal parts.",
+          "evidence": "Consistently orders fractions by denominator size.",
+          "strategy": "Fraction strips; physical comparison; always draw the whole."
+        },
+        {
+          "observed": "Counts 1,2,3 but cannot compare 1/2 and 1/4.",
+          "rootGap": "No concept of fractional quantity — place value and whole-number thinking only.",
+          "evidence": "Says '1/2 and 1/4 are the same because they both have 1.'",
+          "strategy": "Use physical fraction tiles for two weeks; start with halves and quarters of the same whole."
+        }
+      ]
+    },
+    {
+      "id": "math-decimals",
+      "label": "Decimals",
+      "description": "Understanding decimal notation as an extension of place value to fractions.",
+      "gradeLevel": "4–5",
+      "prerequisites": ["math-fractions", "math-place-value"],
+      "misconceptions": [
+        {
+          "observed": "Thinks 0.5 is smaller than 0.25 because 5 < 25.",
+          "rootGap": "Does not extend place value understanding to tenths, hundredths.",
+          "evidence": "Consistently misorders decimals by treating them as whole numbers.",
+          "strategy": "Money context (0.50 vs 0.25); decimal place value chart."
+        }
+      ]
+    },
+    {
+      "id": "math-problem-solving",
+      "label": "Word Problem Solving",
+      "description": "Reading a mathematical scenario and translating it into operations.",
+      "gradeLevel": "2–5",
+      "prerequisites": ["math-addition", "math-subtraction"],
+      "misconceptions": [
+        {
+          "observed": "Grabs numbers from the problem and adds them without reading.",
+          "rootGap": "No reading-for-meaning strategy in mathematics.",
+          "evidence": "For 'Aisha had 5 pencils and gave 2 to Rahim,' writes 5+2=7.",
+          "strategy": "Read → Retell → Represent → Solve. Draw the situation first."
+        }
+      ]
+    }
+  ],
+  "dependencyGraph": {
+    "math-number-sense": [],
+    "math-place-value": ["math-number-sense"],
+    "math-addition": ["math-number-sense", "math-place-value"],
+    "math-subtraction": ["math-addition"],
+    "math-repeated-addition": ["math-addition"],
+    "math-multiplication": ["math-repeated-addition", "math-place-value"],
+    "math-division": ["math-multiplication", "math-subtraction"],
+    "math-fractions": ["math-division", "math-number-sense"],
+    "math-decimals": ["math-fractions", "math-place-value"],
+    "math-problem-solving": ["math-addition", "math-subtraction"]
+  }
+}

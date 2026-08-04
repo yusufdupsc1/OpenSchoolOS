@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: openschoolos-api
+Version: 0.1.0
+Summary: OpenSchoolOS backend (FastAPI)
+Requires-Python: >=3.13
+Requires-Dist: fastapi>=0.139.2
+Requires-Dist: uvicorn>=0.51.0
+Requires-Dist: pydantic>=2.13.4
+Requires-Dist: sqlalchemy>=2.0.51
+Requires-Dist: alembic>=1.18.5
+Requires-Dist: psycopg2-binary>=2.9.12
+Requires-Dist: pydantic-settings>=2.14.2
+Provides-Extra: dev
+Requires-Dist: pytest>=9.1.1; extra == "dev"
+Requires-Dist: httpx>=0.28.1; extra == "dev"

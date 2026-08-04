@@ -1,0 +1,88 @@
+{
+  "subject": "Writing",
+  "description": "The Writing LDG maps the progression from letter formation to coherent composition. Writing difficulties often reveal underlying reading or language gaps.",
+  "competencies": [
+    {
+      "id": "write-letter-formation",
+      "label": "Letter Formation",
+      "description": "Forming letters correctly and consistently; handwriting fluency.",
+      "gradeLevel": "K–1",
+      "prerequisites": [],
+      "misconceptions": [
+        {
+          "observed": "Reverses letters (b/d, p/q) beyond age 7.",
+          "rootGap": "Has not internalized letter orientation patterns.",
+          "evidence": "Consistently writes mirror images even after correction; cannot self-correct.",
+          "strategy": "Multi-sensory letter practice: sand tracing, sky writing, verbal path cues ('around, up, down')."
+        }
+      ]
+    },
+    {
+      "id": "write-spelling",
+      "label": "Spelling",
+      "description": "Encoding sounds into written letters; applying spelling patterns and rules.",
+      "gradeLevel": "1–3",
+      "prerequisites": ["write-letter-formation"],
+      "misconceptions": [
+        {
+          "observed": "Spells phonetically but incorrectly ('sed' for 'said', 'wuz' for 'was').",
+          "rootGap": "Relies only on phonics; has not learned common irregular words or spelling patterns.",
+          "evidence": "All spellings are plausible phonetically but orthographically wrong.",
+          "strategy": "Word sorts by pattern; high-frequency word walls; 'look, cover, write, check' for irregular words."
+        }
+      ]
+    },
+    {
+      "id": "write-sentence-structure",
+      "label": "Sentence Construction",
+      "description": "Writing complete, grammatically correct sentences with subject-verb agreement.",
+      "gradeLevel": "1–3",
+      "prerequisites": ["write-spelling"],
+      "misconceptions": [
+        {
+          "observed": "Writes run-on sentences or fragments. No sense of where a sentence ends.",
+          "rootGap": "Does not understand that a sentence expresses one complete thought.",
+          "evidence": "Writing is a stream of 'and then… and then…' with no punctuation.",
+          "strategy": "Oral rehearsal before writing; sentence combining exercises; colour-code subject and predicate."
+        }
+      ]
+    },
+    {
+      "id": "write-paragraph",
+      "label": "Paragraph Structure",
+      "description": "Organizing sentences around a main idea into a coherent paragraph.",
+      "gradeLevel": "2–4",
+      "prerequisites": ["write-sentence-structure"],
+      "misconceptions": [
+        {
+          "observed": "Writes unrelated sentences in a paragraph; no topic sentence.",
+          "rootGap": "Does not plan before writing; writes as thoughts come.",
+          "evidence": "Each sentence introduces a new, unrelated idea.",
+          "strategy": "Hamburger model (topic sentence, details, closing); graphic organizers; write from outlines."
+        }
+      ]
+    },
+    {
+      "id": "write-composition",
+      "label": "Extended Composition",
+      "description": "Planning, drafting, revising, and editing longer pieces with clear purpose and audience.",
+      "gradeLevel": "3–5",
+      "prerequisites": ["write-paragraph"],
+      "misconceptions": [
+        {
+          "observed": "Cannot sustain a narrative or argument beyond a few sentences.",
+          "rootGap": "Has not internalized a planning process; writes without structure.",
+          "evidence": "Starts strong but trails off; ideas are jumbled; no clear beginning, middle, end.",
+          "strategy": "Plan → Draft → Revise → Edit cycle. Story maps. Peer feedback on structure before mechanics."
+        }
+      ]
+    }
+  ],
+  "dependencyGraph": {
+    "write-letter-formation": [],
+    "write-spelling": ["write-letter-formation"],
+    "write-sentence-structure": ["write-spelling"],
+    "write-paragraph": ["write-sentence-structure"],
+    "write-composition": ["write-paragraph"]
+  }
+}

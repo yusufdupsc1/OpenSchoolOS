@@ -1,0 +1,106 @@
+{
+  "subject": "Reading",
+  "description": "The Reading LDG maps the developmental progression from sound awareness to fluent comprehension. Teachers trace difficulties backward to find the earliest missing prerequisite.",
+  "competencies": [
+    {
+      "id": "read-phonemic-awareness",
+      "label": "Phonemic Awareness",
+      "description": "Hearing, identifying, and manipulating individual sounds (phonemes) in spoken words.",
+      "gradeLevel": "K–1",
+      "prerequisites": [],
+      "misconceptions": [
+        {
+          "observed": "Cannot tell you the first sound in 'dog'.",
+          "rootGap": "Has not developed phonemic segmentation.",
+          "evidence": "Says 'dog' when asked for the first sound; cannot isolate /d/.",
+          "strategy": "Oral sound games; 'I spy' with sounds; clap syllables then segment."
+        }
+      ]
+    },
+    {
+      "id": "read-phonics",
+      "label": "Phonics (Letter-Sound Mapping)",
+      "description": "Connecting letters (graphemes) to sounds (phonemes); decoding written words by sounding them out.",
+      "gradeLevel": "K–2",
+      "prerequisites": ["read-phonemic-awareness"],
+      "misconceptions": [
+        {
+          "observed": "Guesses words from first letter. Cannot sound out unfamiliar words.",
+          "rootGap": "Words memorized visually; letters not mapped to sounds.",
+          "evidence": "Reads 'house' correctly but reads 'horse' as 'house' — relies on shape, not decoding.",
+          "strategy": "Systematic phonics: teach letter-sound correspondences explicitly. Use decodable texts that match known sounds."
+        },
+        {
+          "observed": "Knows all letter sounds but cannot blend them into a word.",
+          "rootGap": "Phonemic blending is not automatic.",
+          "evidence": "Says /c/ /a/ /t/ but cannot say 'cat'.",
+          "strategy": "Continuous blending: stretch sounds without pausing. Start with two-sound words."
+        }
+      ]
+    },
+    {
+      "id": "read-fluency",
+      "label": "Fluency",
+      "description": "Reading with speed, accuracy, and proper expression; automatic word recognition frees cognitive resources for comprehension.",
+      "gradeLevel": "1–3",
+      "prerequisites": ["read-phonics"],
+      "misconceptions": [
+        {
+          "observed": "Reads word-by-word, pausing between each. Cannot follow the sentence meaning.",
+          "rootGap": "Decoding is not yet automatic; all cognitive effort goes to word recognition.",
+          "evidence": "Reads accurately but very slowly; cannot answer 'what was that sentence about?'",
+          "strategy": "Repeated reading of familiar texts; paired reading; model fluent reading with expression."
+        },
+        {
+          "observed": "Reads fast but with no expression; monotone even for questions and dialogue.",
+          "rootGap": "Does not connect punctuation and sentence structure to meaning.",
+          "evidence": "Reads a question mark the same as a period; ignores commas.",
+          "strategy": "Readers' theatre; mark up text with expression cues; record and listen back."
+        }
+      ]
+    },
+    {
+      "id": "read-vocabulary",
+      "label": "Vocabulary",
+      "description": "Knowing the meaning of words encountered in text; word knowledge is the bridge from decoding to comprehension.",
+      "gradeLevel": "1–5",
+      "prerequisites": ["read-phonics"],
+      "misconceptions": [
+        {
+          "observed": "Decodes a word correctly but cannot use it in a sentence.",
+          "rootGap": "Word recognition without meaning; vocabulary has not kept pace with decoding.",
+          "evidence": "Reads 'enormous' fluently but shrugs when asked what it means.",
+          "strategy": "Pre-teach key vocabulary before reading; word maps; use words in multiple contexts."
+        }
+      ]
+    },
+    {
+      "id": "read-comprehension",
+      "label": "Reading Comprehension",
+      "description": "Understanding, interpreting, and reflecting on written text; the ultimate goal of reading.",
+      "gradeLevel": "2–5",
+      "prerequisites": ["read-fluency", "read-vocabulary"],
+      "misconceptions": [
+        {
+          "observed": "Reads a paragraph perfectly but cannot tell you what happened.",
+          "rootGap": "Decoding is automatic but the child is not monitoring for meaning.",
+          "evidence": "Answers 'I don't know' or makes up unrelated answers to comprehension questions.",
+          "strategy": "Stop-and-think strategy after each sentence; visualisation; retelling in own words."
+        },
+        {
+          "observed": "Can answer literal questions but cannot infer.",
+          "rootGap": "Has not learned to combine text evidence with background knowledge.",
+          "evidence": "When asked 'How is the character feeling?' quotes text but cannot interpret.",
+          "strategy": "Think-aloud modelling; inference grids (clue + what I know = inference)."
+        }
+      ]
+    }
+  ],
+  "dependencyGraph": {
+    "read-phonemic-awareness": [],
+    "read-phonics": ["read-phonemic-awareness"],
+    "read-fluency": ["read-phonics"],
+    "read-vocabulary": ["read-phonics"],
+    "read-comprehension": ["read-fluency", "read-vocabulary"]
+  }
+}
